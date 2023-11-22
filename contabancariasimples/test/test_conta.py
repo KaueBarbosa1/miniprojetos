@@ -1,6 +1,6 @@
 import unittest
 
-from src.conta import Conta
+from contabancariasimples.src.conta import Conta
 
 
 class TestConta(unittest.TestCase):

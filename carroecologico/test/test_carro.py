@@ -1,6 +1,6 @@
 import unittest
 
-from src.carro import CarroEcologico
+from carroecologico.src.carro import Carro
 
 
 class TestCarro(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestCarro(unittest.TestCase):
 
     @classmethod
     def setUp(cls):
-        cls.carro = CarroEcologico()
+        cls.carro = Carro()
 
     def testInicializacao(self):
         self.assertEqual(0, self.carro.getPassageiros(),"Ao inicializar um carro o numero de passageiros deve ser zero")

@@ -1,4 +1,4 @@
-from src.pessoa import Pessoa
+from motocasimples.src.pessoa import Pessoa
 
 class Motoca:
 
@@ -7,14 +7,18 @@ class Motoca:
         self.pessoa = None
         self.tempo = 0
 
+
     def getPessoa(self):
         return self.pessoa
+
 
     def getTempo(self):
         return self.tempo
 
+
     def getPotencia(self):
         return self.potencia
+
 
     def subir(self, pessoa: Pessoa):
         if self.pessoa == None:
@@ -23,6 +27,7 @@ class Motoca:
         else:
             return False
 
+
     def descer(self):
         if self.pessoa != None:
             self.pessoa = None
@@ -30,12 +35,14 @@ class Motoca:
         else:
             return False
 
+
     def colocarTempo(self, tempo: int):
         if tempo <= 0:
             return False
         else:
             self.tempo = tempo
             return True
+
 
     def dirigir(self, tempo: int):
         if self.pessoa:
@@ -49,6 +56,7 @@ class Motoca:
         else:
             return False
 
+
     def buzinar(self):
         if self.pessoa:
             potencia2 = ""
@@ -59,3 +67,4 @@ class Motoca:
             buzina = "P" + potencia2 + "m"
         else:
             buzina = ""
+        return buzina

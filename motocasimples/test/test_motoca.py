@@ -1,7 +1,7 @@
 import unittest
 
-from src.motoca import Motoca
-from src.pessoa import Pessoa
+from motocasimples.src.motoca import Motoca
+from motocasimples.src.pessoa import Pessoa
 
 
 class TesteMotoca(unittest.TestCase):
@@ -100,11 +100,11 @@ class TesteMotoca(unittest.TestCase):
 
     def testBuzinar(self):
         motoca = Motoca(5)
-        self.assertEqual(None, motoca.buzinar(),
+        self.assertEqual("", motoca.buzinar(),
                          "Não deve ser possível buzinar se não houver ninguem na motocicleta.")
         pessoa = Pessoa("Pedro", 5)
         motoca.subir(pessoa)
-        self.assertEqual(None, motoca.buzinar(),
+        self.assertEqual("Peeeeem", motoca.buzinar(),
                          "Ao buzinar deve ser possível ver uma string com a quantidade de e equivalente ao número da potencia")
 
 

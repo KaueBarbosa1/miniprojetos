@@ -1,8 +1,8 @@
-from src.carro import CarroEcologico
+from carro import Carro
 
 if __name__ == '__main__':
     #Criando um carro
-    carro = CarroEcologico()
+    carro = Carro()
     print(carro.__dict__)
 
     #Embarcando duas pessoas
